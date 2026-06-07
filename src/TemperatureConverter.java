@@ -37,7 +37,11 @@ public class TemperatureConverter {
                     double result = convertTemperature(temperature, unit);
                     System.out.printf("%.2f\u00B0F is equal to %.2f\u00B0C%n", temperature, result);
                 } else {
-                    System.out.println("Error: Unrecognized unit label.");                }
+                    System.out.println("Error: Invalid unit entered.");
+                    scnr.nextLine();
+
+                }
+                    System.out.println("Error: Invalid unit entered.");
             } else {
                 String userInput = scnr.next();
                 if (userInput.equals("Stop") || userInput.equals("stop")) {
