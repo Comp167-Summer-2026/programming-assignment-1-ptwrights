@@ -36,7 +36,7 @@ public class TemperatureConverter {
                     double result = convertTemperature(temperature, unit);
                     System.out.printf("%.2f°F is equal to %.2f°C%n", temperature, result);
                 } else {
-                    System.out.println("Error: Unrecognizable unit. ");
+                    System.out.println("Error: Unrecognizable unit.");
                 }
             } else {
                 String userInput = scnr.next();
