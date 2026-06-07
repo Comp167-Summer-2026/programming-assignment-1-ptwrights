@@ -23,10 +23,11 @@ public class TemperatureConverter {
         boolean continuous = true;
 
         while (continuous) {
-            System.out.print("Enter temperature value value and its unit or stop to quit");
+            System.out.print("Enter temperature value or type 'stop' to quit: ");
 
             if (scnr.hasNextDouble()) {
                 temperature = scnr.nextDouble();
+                System.out.print("Enter the unit (C or F): ");
                 unit = scnr.next();
 
                 if (unit.equals("C") || unit.equals("c")) {
@@ -36,16 +37,14 @@ public class TemperatureConverter {
                     double result = convertTemperature(temperature, unit);
                     System.out.printf("%.2f°F is equal to %.2f°C%n", temperature, result);
                 } else {
-                    System.out.println("Error: Unrecognizable unit.");
-                }
+                    System.out.println("Error: Unrecognized unit label.");                }
             } else {
                 String userInput = scnr.next();
                 if (userInput.equals("Stop") || userInput.equals("stop")) {
                     continuous = false;
                     System.out.println("Program exits gracefully.");
                 } else {
-                    System.out.println("Error: Enter valid temperature.");
-                }
+                    System.out.println("Error: Invalid temperature input.");                }
             }
         }
     }
