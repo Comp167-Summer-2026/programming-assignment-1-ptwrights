@@ -39,9 +39,7 @@ public class TemperatureConverter {
                 } else {
                     System.out.println("Error: Invalid unit entered.");
                     scnr.nextLine();
-
                 }
-                    System.out.println("Error: Invalid unit entered.");
             } else {
                 String userInput = scnr.next();
                 if (userInput.equals("Stop") || userInput.equals("stop")) {
