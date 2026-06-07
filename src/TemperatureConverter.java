@@ -32,10 +32,10 @@ public class TemperatureConverter {
 
                 if (unit.equals("C") || unit.equals("c")) {
                     double result = convertTemperature(temperature, unit);
-                    System.out.printf("%.2f°C is equal to %.2f°F%n", temperature, result);
+                    System.out.printf("%.2f\u00B0C is equal to %.2f\u00B0F%n", temperature, result);
                 } else if (unit.equals("f") || unit.equals("F")){
                     double result = convertTemperature(temperature, unit);
-                    System.out.printf("%.2f°F is equal to %.2f°C%n", temperature, result);
+                    System.out.printf("%.2f\u00B0F is equal to %.2f\u00B0C%n", temperature, result);
                 } else {
                     System.out.println("Error: Unrecognized unit label.");                }
             } else {
